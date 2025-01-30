@@ -5,6 +5,8 @@
   #NixOS doesent play nice with dynamically linked binaries (by design..), so you can just hard install and then specify the path in the file inside .local where mason sources the lsp
   home.packages = [
     pkgs.lua-language-server 
+    pkgs.pyright
+    pkgs.rocmPackages_5.llvm.clang-tools-extra
   ];
 
   programs.neovim = 
@@ -90,6 +92,8 @@
           p.tree-sitter-python
           p.tree-sitter-json
           p.tree-sitter-go
+          p.tree-sitter-html
+          p.tree-sitter-css
         ]));
         config = toLuaFile ./plugins/treesitter.lua;
       } 

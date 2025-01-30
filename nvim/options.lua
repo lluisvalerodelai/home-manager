@@ -20,6 +20,8 @@ vim.g.mapleader = " "
 local telescope_builtin = require("telescope.builtin")
 local oil = require("oil")
 
+--oil
+vim.keymap.set("n", "<leader>h", require("oil").toggle_hidden, { desc = "Toggle hidden files in Oil" })
 
 --telescope
 map("n", "<leader>ff", telescope_builtin.find_files, { desc = "Telescope find files" })

@@ -21,6 +21,7 @@
 	./zsh.nix
 	./nvim/neovim.nix
   ./git.nix
+  ./python.nix
   ];
 
   #general ones that dont need their own files
@@ -36,18 +37,17 @@
     #grep
     ripgrep
 
-    #rust
+    #languages
+    python314
+    python312Packages.pip
     rustup
-
-    #C/C++
     libgcc
     libcxx
     gnumake42
     gcc
-
-    #go
     go
 
+    #misc
     htop
     tmux
     gh

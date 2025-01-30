@@ -2,8 +2,8 @@
 
 {
     home.packages = with pkgs; [
-	zoxide	
-	zsh-history
+	    zoxide	
+	    zsh-history
     	zsh-autosuggestions
     	zsh-syntax-highlighting
 
@@ -20,12 +20,13 @@
 	theme = "avit";
       };
 
-
-      syntaxHighlighting.enable = true;
+    syntaxHighlighting.enable = true;
 
     initExtra = ''
 
       eval "$(zoxide init zsh)"
+
+      source /home/lluis/.config/zsh-nix-shell/nix-shell.plugin.zsh
 
       ZSH_AUTOCOMPLETE_SUGGESTIONS=1
 
@@ -37,14 +38,13 @@
       alias ..='cd ..'
       alias ...='cd ../..'
       alias n.='nvim .'
-      alias gcm='git commit -m'
-      alias ga.='git add .'
-      alias gs='git status'
-      alias gd='git diff'
-      alias gl='git log --oneline --graph --decorate'
 
-      # Show git branch in prompt
-      # PROMPT='%F{yellow}%n%f@%F{green}%1~%f %# '
+      ZSH_THEME="robbyrussell"
+      
+      # Check if we are inside a nix-shell
+      if [[ -n "$IN_NIX_SHELL" ]]; then
+        PROMPT='[nix-shell]'$PROMPT
+      fi
       '';
 	};
 }
