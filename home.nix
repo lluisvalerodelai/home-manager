@@ -10,7 +10,6 @@
 
   home.sessionVariables = {
     EDITOR = "nvim";
-    GITHUB_ACCESS_TOKEN = "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";
   };
 
   # Let Home Manager install and manage itself.
@@ -21,7 +20,6 @@
 	./zsh.nix
 	./nvim/neovim.nix
   ./git.nix
-  ./python.nix
   ];
 
   #general ones that dont need their own files
@@ -38,7 +36,7 @@
     ripgrep
 
     #languages
-    python314
+    python312
     python312Packages.pip
     rustup
     libgcc
@@ -51,5 +49,6 @@
     htop
     tmux
     gh
+    chromium
   ];
 }
