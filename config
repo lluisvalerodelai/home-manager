@@ -34,7 +34,7 @@ bindsym $mod+t exec kitty
 bindsym $mod+Shift+f exec firefox
 bindsym $mod+g exec firefox -new-tab "https://mail.google.com/mail/u/0/#inbox"
 bindsym $mod+Shift+g exec firefox -new-tab "https://github.com/"
-bindsym $mod+m exec firefox -new-tab "https://monkeytype.com/"
+bindsym $mod+m exec firefox -new-window "https://monkeytype.com/"
 bindsym $mod+y exec firefox -new-tab "https://youtube.com/"
 # kill focused window
 bindsym $mod+x kill
