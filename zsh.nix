@@ -26,8 +26,6 @@
 
       eval "$(zoxide init zsh)"
 
-      source /home/lluis/.config/zsh-nix-shell/nix-shell.plugin.zsh
-
       ZSH_AUTOCOMPLETE_SUGGESTIONS=1
 
       # Enable the case-insensitive completion

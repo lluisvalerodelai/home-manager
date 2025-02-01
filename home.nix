@@ -30,7 +30,7 @@
 
     neofetch
     fastfetch
-    nerdfonts
+    # nerdfonts
 
     #grep
     ripgrep
