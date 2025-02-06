@@ -81,7 +81,6 @@
         plugin = leap-nvim;
         config = toLuaFile ./plugins/leap.lua;
       }
-
       
       {
         plugin = (nvim-treesitter.withPlugins (p: [
@@ -99,11 +98,8 @@
       } 
 
     ];
-
   extraLuaConfig = ''
       ${builtins.readFile ./options.lua}
     '';
-
   };
-
 }
