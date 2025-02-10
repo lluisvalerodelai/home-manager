@@ -1,9 +1,9 @@
 { config, lib, pkgs, ...}:
 
-{
-	programs.git= {
-		enable = true;
-    userName = "lluisvalerodelai";
-    userEmail = "lluisvalerodelai@gmail.com";
-};
+	{
+		programs.git= {
+			enable = true;
+	    userName = "lluisvalerodelai";
+	    userEmail = "lluisvalerodelai@gmail.com";
+	};
 }
